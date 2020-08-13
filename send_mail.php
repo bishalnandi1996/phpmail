@@ -25,13 +25,13 @@ $encoded_content='';
 if(isset(_FILES['frmZipFile'])) {
 	$attachments = $_FILES['frmZipFile'];
 
-	//get file info
+	#get file info
 	$file_name = $attachments['name'];
 	$file_size = $attachments['size'];
 	$file_type = $attachments['type'];
 
 
-	//read file 
+	#read file 
 	$handle = fopen($attachments['tmp_name'], "r");
 	$content = fread($handle, $file_size);
 	fclose($handle);
